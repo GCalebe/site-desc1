@@ -1,0 +1,169 @@
+﻿
+<html lang="pt-br">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ 
+    <title>Grandes Olhos</title>
+
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+
+
+
+    <style>
+
+        body {
+            background-color: #14495e;
+            color: #fff;
+        }
+
+
+
+        .header {
+            background-color: #0f0;
+            padding: 20px;
+        }
+
+        .olhos {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 100%;
+            text-align: center;
+        }
+
+        .olho{
+            width: 240px;
+            height: 120px;
+            background: #fff;
+            display: inline-block;
+            margin: 40px;
+            border-radius: 50%;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .iris {
+            width: 80px;
+            height: 80px;
+            background: #000;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            border-radius: 50%;
+        }
+
+
+        .container {
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+    </style>
+
+
+
+
+
+</head>
+
+<body>
+
+
+
+    <header class="header">
+
+        <h1 class="text-center">GRANDES OLHOS</h1>
+
+
+
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+
+            <a class="navbar-brand">OLHOS 👀 </a>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+
+                <ul class="navbar-nav">
+
+                    <li class="nav-item active">
+
+                        <a class="nav-link" href="#">botao1</a>
+
+                    </li>
+
+                    <li class="nav-item">
+
+                        <a class="nav-link" href="#">botao2</a>
+
+                    </li>
+
+                    <li class="nav-item">
+
+                        <a class="nav-link" href="#">botao3</a>
+
+                    </li>
+
+                    <li class="nav-item dropdown">
+
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> MENU 2 - cascata </a>
+
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+
+                            <a class="dropdown-item" href="#">link 1</a>
+
+                            <a class="dropdown-item" href="#">link 2</a>
+
+                            <a class="dropdown-item" href="#">link 3</a>
+
+                        </div>
+
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </nav>
+
+    </header>
+  
+        <div class="olhos">
+            <div class="olho">
+                <div class="iris"></div>
+            </div>
+            <div class="olho">
+                <div class="iris"></div>
+            </div>
+        </div>
+ 
+
+    <footer class="container-fluid text-center">
+
+        <p>© 10/03/2024 GRANDES OLHOS. Todos os direitos reservados.</p>
+
+    </footer>
+  
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <script> 
+
+const iris = document.getElementsByClassName('iris');
+document.onmousemove = (event) => {
+  const x = (event.clientX * 100) / window.innerWidth + '%';
+  const y = (event.clientY * 100) / window.innerHeight + '%';
+
+  for (let i = 0; i < 2; i++) {
+    iris[i].style.left = x;
+    iris[i].style.top = y;
+    iris[i].transform = 'translate(-' + x + ',-' + y + ')';
+  }
+};
+
+</script>
+</body>
+
+</html>
+
